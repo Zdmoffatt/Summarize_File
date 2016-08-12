@@ -1,10 +1,11 @@
 Summary for testfile.txt:
 'File created at :Tue Jul  5 17:02:18 2016'
 'File modified at :Thu Aug 11 00:04:29 2016'
-'\\n'
+'\n'
 'Lines: 1000'
 'Words: 1000'
 'Unique words: 999'
+5837
 '\n'
 {'\n': 999,
  'a': 370,
