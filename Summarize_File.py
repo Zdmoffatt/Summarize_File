@@ -5,8 +5,8 @@ from pprint import pprint
 import os.path, time, sys
 
 print("What is the name of your file?")
-fileName = input()
-if(not os.path.isfile(fileName)):
+inputFileName = input()
+if(not os.path.isfile(inputFileName)):
     sys.exit("Not a file in this directory")
 
 with open(fileName+'_summary.txt','w') as summary:
@@ -19,7 +19,7 @@ with open(fileName+'_summary.txt','w') as summary:
     print("\n")
 
     #NumLines analysis
-    #with open(fileName, 'r') as f:
+    #with open(inputFileName, 'r') as f:
     #    for numLines, l in enumerate(f):
     #        pass
     #    numLines=numLines+1
@@ -27,9 +27,9 @@ with open(fileName+'_summary.txt','w') as summary:
 
     #Lines and Words analysis
     numLines = 0
-    numWords = 0
+    numWords = 0 
     uniques = {}
-    with open(fileName, 'r') as f:
+    with open(inputFileName, 'r') as f:
         for line in f:
             numLines = numLines + 1
 
@@ -64,7 +64,7 @@ with open(fileName+'_summary.txt','w') as summary:
 
     #Character anaylsis
     charDict = {}
-    with open(fileName, 'r') as f:
+    with open(inputFileName, 'r') as f:
         for line in f:
             for currentChar in line:
                 if currentChar in charDict:
