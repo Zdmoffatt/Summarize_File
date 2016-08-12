@@ -2,10 +2,13 @@
 #Takes in a text file and writes a summary of that file to both the terminal and to a file
 
 from pprint import pprint
-import os.path, time
+import os.path, time, sys
 
 print("What is the name of your file?")
 fileName = input()
+if(not os.path.isfile(fileName)):
+    sys.exit("Not a file in this directory")
+
 with open(fileName+'_summary.txt','w') as summary:
     summary.write("Summary for " + fileName+":\n")
     print("File created at :" + str(time.ctime(os.path.getctime(fileName))))
